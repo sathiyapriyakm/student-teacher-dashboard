@@ -16,8 +16,7 @@ export function SideBarComp() {
         <div className="bg-white py-2 collapse-inner rounded">
           <h6 className="collapse-header">STUDENT SECTION:</h6>
           <a onClick={()=>navigate("/StudentDetails")} className="collapse-item" href="#">STUDENT DETAILS</a>
-          <a onClick={()=>navigate("/Cards")} className="collapse-item" href="#">ADD STUDENT</a>
-          <a onClick={()=>navigate("/Cards")} className="collapse-item" href="#">STUDENT ACTIVITIES</a>
+          <a onClick={()=>navigate("/Add-Student")} className="collapse-item" href="#">ADD STUDENT</a>
         </div>
       </div>
     </li>

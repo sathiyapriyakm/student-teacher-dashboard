@@ -8,7 +8,7 @@ import { Routes,Route,Navigate} from "react-router-dom";
 import { StudentDetails } from './StudentDetails';
 import { Cards } from './Cards';
 import { Colors } from './Colors';
-import { Borders } from './Borders';
+import { AddStudent } from './AddStudent';
 import { Animations } from './Animations';
 import { Other } from './Other';
 import { Login } from './Login';
@@ -31,7 +31,7 @@ function App() {
           <Route path="/StudentDetails" element={<MainBoard flow="StudentDetails"/>}/>
           <Route path="/Cards" element={<MainBoard flow="Cards"/>}/>
           <Route path="/Colors" element={<MainBoard flow="Colors"/>}/>
-          <Route path="/Borders" element={<MainBoard flow="Borders"/>}/>
+          <Route path="/AddStudent" element={<MainBoard flow="AddStudent"/>}/>
           <Route path="/Animations" element={<MainBoard flow="Animations"/>}/>
           <Route path="/Charts" element={<MainBoard flow="Charts"/>}/>
           <Route path="/Tables" element={<MainBoard flow="Tables"/>}/>
@@ -39,6 +39,7 @@ function App() {
           <Route path="*" element={<Navigate replace to="/404-Page"/>}/>
           <Route path="/Dashboard" element={<Navigate replace to="/"/>}/>
           <Route path="/students/edit/:studentId" element={<MainBoard flow="StudentEdit"/>}/>
+          <Route path="/Add-Student" element={<MainBoard flow="AddStudent"/>}/>
           </Routes>
       </div>
  </>
@@ -63,7 +64,7 @@ function MainBoard({flow}){
                    "StudentDetails":<StudentDetails/>,
                    "Cards":<Cards/>,
                    "Colors":<Colors/>,
-                   "Borders":<Borders/>,
+                   "AddStudent":<AddStudent/>,
                    "Animations":<Animations/>,
                    "Other":<Other/>,
                    "404-Page":<NotFound/>,
@@ -75,12 +76,7 @@ function MainBoard({flow}){
             </div>
           </div>
           <Footer/>
-          </div>
-          <a className="scroll-to-top rounded" href="#page-top">
-        <i className="fas fa-angle-up"></i>
-    </a>
-    
-         
+          </div>    
       </div></>
     );
 }
