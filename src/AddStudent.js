@@ -91,7 +91,7 @@ export function AddStudent() {
        helperText= {touched.address&&errors.address?errors.address:""}
     />
      <Button className="add-student-btn" 
-      color="success"
+      color="primary"
     type="submit"
     variant="contained">ADD STUDENT</Button>
   </form> 

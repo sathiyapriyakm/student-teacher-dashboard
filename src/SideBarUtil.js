@@ -16,7 +16,7 @@ export function SideBarUtil() {
           data-parent="#accordionSidebar">
           <div className="bg-white py-2 collapse-inner rounded">
             <h6 className="collapse-header">TEACHERS SECTION:</h6>
-            <a onClick={()=>navigate("/Colors")} className="collapse-item" href="#">TEACHERS DETAILS</a>
+            <a onClick={()=>navigate("/TeacherDetails")} className="collapse-item" href="#">TEACHERS DETAILS</a>
             <a onClick={()=>navigate("/Borders")} className="collapse-item" href="#">ADD TEACHER</a>
           </div>
         </div>

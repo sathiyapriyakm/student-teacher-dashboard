@@ -7,7 +7,7 @@ import React from "react";
 import { Routes,Route,Navigate} from "react-router-dom";
 import { StudentDetails } from './StudentDetails';
 import { Cards } from './Cards';
-import { Colors } from './Colors';
+import { TeacherDetails } from './TeacherDetails';
 import { AddStudent } from './AddStudent';
 import { Animations } from './Animations';
 import { Other } from './Other';
@@ -30,7 +30,7 @@ function App() {
           <Route path="/" element={<MainBoard flow=""/>}/>
           <Route path="/StudentDetails" element={<MainBoard flow="StudentDetails"/>}/>
           <Route path="/Cards" element={<MainBoard flow="Cards"/>}/>
-          <Route path="/Colors" element={<MainBoard flow="Colors"/>}/>
+          <Route path="/TeacherDetails" element={<MainBoard flow="TeacherDetails"/>}/>
           <Route path="/AddStudent" element={<MainBoard flow="AddStudent"/>}/>
           <Route path="/Animations" element={<MainBoard flow="Animations"/>}/>
           <Route path="/Charts" element={<MainBoard flow="Charts"/>}/>
@@ -63,7 +63,7 @@ function MainBoard({flow}){
                    "":<Dashboard/>,
                    "StudentDetails":<StudentDetails/>,
                    "Cards":<Cards/>,
-                   "Colors":<Colors/>,
+                   "TeacherDetails":<TeacherDetails/>,
                    "AddStudent":<AddStudent/>,
                    "Animations":<Animations/>,
                    "Other":<Other/>,
