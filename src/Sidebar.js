@@ -38,7 +38,7 @@ export function Sidebar() {
         </div>
 
         <li className="nav-item">
-          <a onClick={()=>navigate("/Charts")} className="nav-link" href="#">
+          <a onClick={()=>navigate("/UpComingEvents")} className="nav-link" href="#">
             <i className="fas fa-fw fa-calendar"></i>
             <span>Upcoming Events</span></a>
         </li>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Message } from "./Message";
+import { TeacherMessage } from "./TeacherMessage";
 import {useState,useEffect} from 'react';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -9,41 +9,41 @@ import { useNavigate } from "react-router-dom";
 
 export function TeacherDetails() {
 
-  const [studentList, setStudentList] = useState([]);
+  const [teacherstList, setTeachersList] = useState([]);
   const navigate=useNavigate();
-  const getStudents=()=>{
-  fetch("https://62aa7f0d371180affbd633f8.mockapi.io/students",{
+  const getTeachers=()=>{
+  fetch("https://62aa7f0d371180affbd633f8.mockapi.io/teachers",{
     method:"GET",
   }
   )
   .then((data)=>(data.json()))
-  .then((mvs)=>setStudentList(mvs));
+  .then((mvs)=>setTeachersList(mvs));
   }   
-  useEffect(()=>getStudents(),[]);
+  useEffect(()=>getTeachers(),[]);
   const handleDelete=(deletionId)=>{
-    fetch(`https://62aa7f0d371180affbd633f8.mockapi.io/students/${deletionId}`,{
+    fetch(`https://62aa7f0d371180affbd633f8.mockapi.io/teachers/${deletionId}`,{
     method:"DELETE",
-  }).then(()=>getStudents());
+  }).then(()=>getTeachers());
   }
   
-  return <div className="student-list">
-    {studentList.map((disp) => (<Message 
+  return <div className="teacher-list">
+    {teacherstList.map((disp) => (<TeacherMessage 
     key={disp.id} 
     name={disp.name} 
-    standard={disp.standard} 
+    major={disp.major} 
     contact_number={disp.contact_number} 
     address={disp.address} 
     id={disp.id}
     deleteButton={<IconButton 
-    aria-label="student-delete-button" 
+    aria-label="teacher-delete-button" 
     color="error" 
     onClick={()=>handleDelete(disp.id)}>
     <DeleteIcon />
   </IconButton>}
   editButton={<IconButton 
-    aria-label="student-edit-button" 
+    aria-label="teacher-edit-button" 
     color="primary" 
-    onClick={()=>navigate(`/students/edit/${disp.id}`)}
+    onClick={()=>navigate(`/teachers/edit/${disp.id}`)}
     >
     <EditIcon />
   </IconButton>}

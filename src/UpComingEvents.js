@@ -1,30 +1,6 @@
 import React from "react";
-// import { LineChart,BarChart,PieChart,Pie,Bar, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-// const data= [
-//     {Month:"Jan",value:0},
-//     {Month:"Feb",value:10000},
-//     {Month:"Mar",value:5000},
-//     {Month:"Apr",value:15000},
-//     {Month:"May",value:10000},
-//     {Month:"Jun",value:20000},
-//     {Month:"Jul",value:15000},
-//     {Month:"Aug",value:25000},
-//     {Month:"Sep",value:20000},
-//     {Month:"Oct",value:30000},
-//     {Month:"Nov",value:25000},
-//     {Month:"Dec",value:40000},
-// ];
-
-// const data1=[
-//     {Source:"Direct",value:55},
-//     {Source:"Referral",value:30},
-//     {Source:"Social",value:15},
-// ]
-
-
-
-export function Charts() {
+export function UpComingEvents() {
     return (
         <>
             <div class="container-fluid">
@@ -51,7 +27,7 @@ export function Charts() {
                                 </LineChart>
                             </ResponsiveContainer> */}
                                 </div>
-                                <hr />
+                                <hr />  
                                 Styling for the area chart can be found in the
                                 <code>/js/demo/chart-area-demo.js</code> file.
                             </div>

@@ -17,7 +17,7 @@ export function SideBarUtil() {
           <div className="bg-white py-2 collapse-inner rounded">
             <h6 className="collapse-header">TEACHERS SECTION:</h6>
             <a onClick={()=>navigate("/TeacherDetails")} className="collapse-item" href="#">TEACHERS DETAILS</a>
-            <a onClick={()=>navigate("/Borders")} className="collapse-item" href="#">ADD TEACHER</a>
+            <a onClick={()=>navigate("/Add-Teacher")} className="collapse-item" href="#">ADD TEACHER</a>
           </div>
         </div>
       </li></>);

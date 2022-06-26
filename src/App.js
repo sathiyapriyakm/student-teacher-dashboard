@@ -6,17 +6,16 @@ import Footer from "./Footer"
 import React from "react";
 import { Routes,Route,Navigate} from "react-router-dom";
 import { StudentDetails } from './StudentDetails';
-import { Cards } from './Cards';
 import { TeacherDetails } from './TeacherDetails';
 import { AddStudent } from './AddStudent';
-import { Animations } from './Animations';
-import { Other } from './Other';
+import { AddTeacher } from './AddTeacher';
 import { Login } from './Login';
 import { ForgetPassword } from './ForgetPassword';
 import { Register } from './Register';
 import { NotFound } from './NotFound';
-import { Charts } from './Charts';
+import { UpComingEvents } from './UpComingEvents';
 import { StudentEdit } from './StudentEdit';
+import { TeacherEdit } from './TeacherEdit';
 
 function App() {
   return (
@@ -29,17 +28,17 @@ function App() {
           <Route path="/Register" element={<Register/>}/>
           <Route path="/" element={<MainBoard flow=""/>}/>
           <Route path="/StudentDetails" element={<MainBoard flow="StudentDetails"/>}/>
-          <Route path="/Cards" element={<MainBoard flow="Cards"/>}/>
           <Route path="/TeacherDetails" element={<MainBoard flow="TeacherDetails"/>}/>
           <Route path="/AddStudent" element={<MainBoard flow="AddStudent"/>}/>
-          <Route path="/Animations" element={<MainBoard flow="Animations"/>}/>
-          <Route path="/Charts" element={<MainBoard flow="Charts"/>}/>
+          <Route path="/UpComingEvents" element={<MainBoard flow="UpComingEvents"/>}/>
           <Route path="/Tables" element={<MainBoard flow="Tables"/>}/>
           <Route path="/404-Page" element={<MainBoard flow="404-Page"/>}/>
           <Route path="*" element={<Navigate replace to="/404-Page"/>}/>
           <Route path="/Dashboard" element={<Navigate replace to="/"/>}/>
           <Route path="/students/edit/:studentId" element={<MainBoard flow="StudentEdit"/>}/>
+          <Route path="/teachers/edit/:teacherId" element={<MainBoard flow="TeacherEdit"/>}/>
           <Route path="/Add-Student" element={<MainBoard flow="AddStudent"/>}/>
+          <Route path="/Add-Teacher" element={<MainBoard flow="AddTeacher"/>}/>
           </Routes>
       </div>
  </>
@@ -62,14 +61,13 @@ function MainBoard({flow}){
                {
                    "":<Dashboard/>,
                    "StudentDetails":<StudentDetails/>,
-                   "Cards":<Cards/>,
                    "TeacherDetails":<TeacherDetails/>,
                    "AddStudent":<AddStudent/>,
-                   "Animations":<Animations/>,
-                   "Other":<Other/>,
+                   "AddTeacher":<AddTeacher/>,
                    "404-Page":<NotFound/>,
-                   "Charts":<Charts/>,
+                   "UpComingEvents":<UpComingEvents/>,
                    "StudentEdit":<StudentEdit/>,
+                   "TeacherEdit":<TeacherEdit/>,
                }[flow]
                }
             </section>  
@@ -80,6 +78,3 @@ function MainBoard({flow}){
       </div></>
     );
 }
-
-
-
