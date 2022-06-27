@@ -28,7 +28,7 @@ export function Topbar() {
 
   
     <li className="nav-item dropdown no-arrow d-sm-none">
-        <a className="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+        <a className="nav-link dropdown-toggle"  id="searchDropdown" role="button"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i className="fas fa-search fa-fw"></i>
         </a>
