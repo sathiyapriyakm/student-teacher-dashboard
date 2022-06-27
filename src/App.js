@@ -48,7 +48,7 @@ export default App;
 function MainBoard({flow}){
     return (
         <>
-             <div id="wrapper">
+             <div id="wrapper" style={{width:"100%"}}>
           <Sidebar/>
           <div id="content-wrapper" className="d-flex flex-column">
           <div id="content">
