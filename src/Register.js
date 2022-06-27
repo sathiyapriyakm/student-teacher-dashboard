@@ -41,23 +41,23 @@ export function Register() {
                                                     id="exampleRepeatPassword" placeholder="Repeat Password" />
                                             </div>
                                         </div>
-                                        <a onClick={() => navigate("/Login")} href="#" className="btn btn-primary btn-user btn-block">
+                                        <a onClick={() => navigate("/Login")}  className="btn btn-primary btn-user btn-block">
                                             Register Account
                                         </a>
                                         <hr />
-                                        <a onClick={() => navigate("/")} href="#" className="btn btn-google btn-user btn-block">
+                                        <a onClick={() => navigate("/")}  className="btn btn-google btn-user btn-block">
                                             <i className="fab fa-google fa-fw"></i> Register with Google
                                         </a>
-                                        <a onClick={() => navigate("/")} href="#" className="btn btn-facebook btn-user btn-block">
+                                        <a onClick={() => navigate("/")}  className="btn btn-facebook btn-user btn-block">
                                             <i className="fab fa-facebook-f fa-fw"></i> Register with Facebook
                                         </a>
                                     </form>
                                     <hr />
                                     <div onClick={() => navigate("/Forgot-Password")} className="text-center">
-                                        <a className="small" href="#">Forgot Password?</a>
+                                        <a className="small" >Forgot Password?</a>
                                     </div>
                                     <div className="text-center">
-                                        <a onClick={() => navigate("/Login")} className="small" href="#">Already have an account? Login!</a>
+                                        <a onClick={() => navigate("/Login")} className="small" >Already have an account? Login!</a>
                                     </div>
                                 </div>
                             </div>

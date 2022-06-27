@@ -11,7 +11,7 @@ export function Sidebar() {
     <>
       <ul className="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
 
-        <a className="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+        <a className="sidebar-brand d-flex align-items-center justify-content-center" >
           <div className="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-user-graduate"></i>
           </div>
@@ -31,20 +31,7 @@ export function Sidebar() {
 
         <SideBarUtil />
 
-        <hr className="sidebar-divider" />
-
-        <div className="sidebar-heading">
-          Addons
-        </div>
-
-        <li className="nav-item">
-          <a onClick={()=>navigate("/UpComingEvents")} className="nav-link" href="#">
-            <i className="fas fa-fw fa-calendar"></i>
-            <span>Upcoming Events</span></a>
-        </li>
-        <hr className="sidebar-divider d-none d-md-block" />
-
-       
+        <hr className="sidebar-divider" />     
       </ul>
 
     </>

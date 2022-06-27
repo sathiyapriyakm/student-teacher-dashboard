@@ -5,7 +5,7 @@ export function Mail() {
     return (
         <>
             <li className={show?"nav-item dropdown no-arrow mx-1 show":"nav-item dropdown no-arrow mx-1"}>
-                <a onClick={()=>setShow(!show)} className="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                <a onClick={()=>setShow(!show)} className="nav-link dropdown-toggle"  id="messagesDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded={show?"true":"false"}>
                     <i className="fas fa-envelope fa-fw"></i>
 
@@ -17,7 +17,7 @@ export function Mail() {
                     <h6 className="dropdown-header">
                         Message Center
                     </h6>
-                    <a className="dropdown-item d-flex align-items-center" href="#">
+                    <a className="dropdown-item d-flex align-items-center" >
                         <div className="dropdown-list-image mr-3">
                             <img className="rounded-circle" src="img/undraw_profile_1.svg"
                                 alt="..." />
@@ -29,7 +29,7 @@ export function Mail() {
                             <div className="small text-gray-500">Emily Fowler · 58m</div>
                         </div>
                     </a>
-                    <a className="dropdown-item d-flex align-items-center" href="#">
+                    <a className="dropdown-item d-flex align-items-center" >
                         <div className="dropdown-list-image mr-3">
                             <img className="rounded-circle" src="img/undraw_profile_2.svg"
                                 alt="..." />
@@ -41,7 +41,7 @@ export function Mail() {
                             <div className="small text-gray-500">Jae Chun · 1d</div>
                         </div>
                     </a>
-                    <a className="dropdown-item d-flex align-items-center" href="#">
+                    <a className="dropdown-item d-flex align-items-center" >
                         <div className="dropdown-list-image mr-3">
                             <img className="rounded-circle" src="img/undraw_profile_3.svg"
                                 alt="..." />
@@ -53,7 +53,7 @@ export function Mail() {
                             <div className="small text-gray-500">Morgan Alvarez · 2d</div>
                         </div>
                     </a>
-                    <a className="dropdown-item d-flex align-items-center" href="#">
+                    <a className="dropdown-item d-flex align-items-center" >
                         <div className="dropdown-list-image mr-3">
                             <img className="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
                                 alt="..." />
@@ -65,7 +65,7 @@ export function Mail() {
                             <div className="small text-gray-500">Chicken the Dog · 2w</div>
                         </div>
                     </a>
-                    <a className="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                    <a className="dropdown-item text-center small text-gray-500" >Read More Messages</a>
                 </div>
             </li>
         </>

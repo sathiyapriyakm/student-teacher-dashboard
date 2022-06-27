@@ -1,5 +1,5 @@
 export function CardDashboard({detail,value,iprop}){
- 
+ console.log(value);
     return(
         <div className="col-xl-6 col-md-6 mb-4">
         <div className="card border-left-primary shadow h-100 py-2">

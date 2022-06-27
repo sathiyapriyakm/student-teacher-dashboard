@@ -27,16 +27,16 @@ export function ForgetPassword() {
                                                         id="exampleInputEmail" aria-describedby="emailHelp"
                                                         placeholder="Enter Email Address..." />
                                                 </div>
-                                                <a onClick={() => navigate("/Login")} href="#" className="btn btn-primary btn-user btn-block">
+                                                <a onClick={() => navigate("/Login")}  className="btn btn-primary btn-user btn-block">
                                                     Reset Password
                                                 </a>
                                             </form>
                                             <hr />
                                             <div className="text-center">
-                                                <a onClick={() => navigate("/Register")}  className="small" href="#">Create an Account!</a>
+                                                <a onClick={() => navigate("/Register")}  className="small" >Create an Account!</a>
                                             </div>
                                             <div className="text-center">
-                                                <a onClick={() => navigate("/Login")}  className="small" href="#">Already have an account? Login!</a>
+                                                <a onClick={() => navigate("/Login")}  className="small" >Already have an account? Login!</a>
                                             </div>
                                         </div>
                                     </div>

@@ -4,7 +4,7 @@ export function SideBarDashboard() {
   return (
     <>
       <li className="nav-item active">
-        <a onClick={()=>navigate("/")}className="nav-link" href="#">
+        <a onClick={()=>navigate("/")}className="nav-link" >
           <i className="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>

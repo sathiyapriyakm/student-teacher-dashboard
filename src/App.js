@@ -13,7 +13,6 @@ import { Login } from './Login';
 import { ForgetPassword } from './ForgetPassword';
 import { Register } from './Register';
 import { NotFound } from './NotFound';
-import { UpComingEvents } from './UpComingEvents';
 import { StudentEdit } from './StudentEdit';
 import { TeacherEdit } from './TeacherEdit';
 
@@ -30,7 +29,6 @@ function App() {
           <Route path="/StudentDetails" element={<MainBoard flow="StudentDetails"/>}/>
           <Route path="/TeacherDetails" element={<MainBoard flow="TeacherDetails"/>}/>
           <Route path="/AddStudent" element={<MainBoard flow="AddStudent"/>}/>
-          <Route path="/UpComingEvents" element={<MainBoard flow="UpComingEvents"/>}/>
           <Route path="/Tables" element={<MainBoard flow="Tables"/>}/>
           <Route path="/404-Page" element={<MainBoard flow="404-Page"/>}/>
           <Route path="*" element={<Navigate replace to="/404-Page"/>}/>
@@ -65,7 +63,6 @@ function MainBoard({flow}){
                    "AddStudent":<AddStudent/>,
                    "AddTeacher":<AddTeacher/>,
                    "404-Page":<NotFound/>,
-                   "UpComingEvents":<UpComingEvents/>,
                    "StudentEdit":<StudentEdit/>,
                    "TeacherEdit":<TeacherEdit/>,
                }[flow]

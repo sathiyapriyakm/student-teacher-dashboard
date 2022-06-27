@@ -37,23 +37,23 @@ export function Login() {
                                                             Me</label>
                                                     </div>
                                                 </div>
-                                                <a onClick={() => navigate("/")} href="#" className="btn btn-primary btn-user btn-block">
+                                                <a onClick={() => navigate("/")}  className="btn btn-primary btn-user btn-block">
                                                     Login
                                                 </a>
                                                 <hr />
-                                                <a onClick={() => navigate("/")} href="#" className="btn btn-google btn-user btn-block">
+                                                <a onClick={() => navigate("/")}  className="btn btn-google btn-user btn-block">
                                                     <i className="fab fa-google fa-fw"></i> Login with Google
                                                 </a>
-                                                <a onClick={() => navigate("/")} href="#" className="btn btn-facebook btn-user btn-block">
+                                                <a onClick={() => navigate("/")}  className="btn btn-facebook btn-user btn-block">
                                                     <i className="fab fa-facebook-f fa-fw"></i> Login with Facebook
                                                 </a>
                                             </form>
                                             <hr />
                                             <div className="text-center">
-                                                <a onClick={() => navigate("/Forgot-Password")} className="small" href="#">Forgot Password?</a>
+                                                <a onClick={() => navigate("/Forgot-Password")} className="small" >Forgot Password?</a>
                                             </div>
                                             <div className="text-center">
-                                                <a onClick={() => navigate("/Register")} className="small" href="#">Create an Account!</a>
+                                                <a onClick={() => navigate("/Register")} className="small" >Create an Account!</a>
                                             </div>
                                         </div>
                                     </div>
