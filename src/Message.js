@@ -6,7 +6,7 @@ import CardContent from '@mui/material/CardContent';
 
 export function Message({ name, standard, contact_number, address ,id, deleteButton,editButton}) {
 
-  return (<Card className="teacher-container" sx={{height:"min-content",width:"100%",textAlign:"center"}}>
+  return (<Card className="teacher-container" sx={{height:"min-content",textAlign:"center"}}>
     <img className="teacher-poster" src="http://www.galaxyskills.org/wp-content/uploads/2019/02/dummy-350x350.png" alt={name} />
     <CardContent>
      <div className="teacher-specs"> 

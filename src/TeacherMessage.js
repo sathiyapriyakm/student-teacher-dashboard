@@ -6,8 +6,8 @@ import CardContent from '@mui/material/CardContent';
 
 export function TeacherMessage({ name, major, contact_number, address ,id, deleteButton,editButton}) {
 
-  return (<div className="d-sm-flex align-items-center  mb-4" style={{width:"100%"}}>
-  <Card className="student-container" sx={{height:"min-content",width:"100%",textAlign:"center"}}>
+  return (
+  <Card className="student-container" sx={{height:"min-content",textAlign:"center"}}>
     <img className="student-poster" 
     src= "https://www.saraswatiias.com/wp-content/uploads/2018/11/dummy-profile-pic-male1.jpg"
      alt={name} />
@@ -27,6 +27,5 @@ export function TeacherMessage({ name, major, contact_number, address ,id, delet
       </div>
       </CardActions>
     </Card>
-    </div>
     );
 }
