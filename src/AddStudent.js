@@ -1,14 +1,14 @@
 import React from "react";
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
+import { useContext } from "react";
+import {AppContext} from './AppContext'
 import * as yup from "yup";
 
 
 export function AddStudent() {
-  
-  const navigate=useNavigate();
+  const { addStudent } = useContext(AppContext)
   
   const studentValidationSchema=yup.object({
     name:yup.string().required("why not fill this name?"),
@@ -17,15 +17,15 @@ export function AddStudent() {
     address:yup.string().required("why not fill this address?").min(10,"Need a bigger address"),
   })
   
-  const addStudent =(newStudent) => {
-    fetch("https://62aa7f0d371180affbd633f8.mockapi.io/students", {
-    method: "POST",
-    body: JSON.stringify(newStudent),
-    headers: {
-      "Content-Type" : "application/json",
-    },
-  }).then(() => navigate("/StudentDetails"));
-  };
+  // const addStudent =(newStudent) => {
+  //   fetch("https://62aa7f0d371180affbd633f8.mockapi.io/students", {
+  //   method: "POST",
+  //   body: JSON.stringify(newStudent),
+  //   headers: {
+  //     "Content-Type" : "application/json",
+  //   },
+  // }).then(() => navigate("/StudentDetails"));
+  // };
   
   const {handleBlur,handleChange,handleSubmit,values,errors,touched}=useFormik({
     initialValues:{

@@ -15,6 +15,7 @@ import { Register } from './Register';
 import { NotFound } from './NotFound';
 import { StudentEdit } from './StudentEdit';
 import { TeacherEdit } from './TeacherEdit';
+import {Appstate} from './AppContext'
 
 function App() {
   return (
@@ -48,6 +49,7 @@ export default App;
 function MainBoard({flow}){
     return (
         <>
+        <Appstate>
              <div id="wrapper" style={{width:"100%"}}>
           <Sidebar/>
           <div id="content-wrapper" className="d-flex flex-column">
@@ -72,6 +74,8 @@ function MainBoard({flow}){
           </div>
           <Footer/>
           </div>    
-      </div></>
+      </div>
+      </Appstate>
+      </>
     );
 }

@@ -1,30 +1,33 @@
 import React from "react";
 import { Message } from "./Message";
-import {useState,useEffect} from 'react';
+import {useEffect} from 'react';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import {AppContext} from './AppContext'
 
 
 export function StudentDetails() {
+  const { studentList,getStudentDetails,handleDeleteStudent} = useContext(AppContext)
 
-  const [studentList, setStudentList] = useState([]);
+  // const [studentList, setStudentList] = useState([]);
   const navigate=useNavigate();
-  const getStudents=()=>{
-  fetch("https://62aa7f0d371180affbd633f8.mockapi.io/students",{
-    method:"GET",
-  }
-  )
-  .then((data)=>(data.json()))
-  .then((mvs)=>setStudentList(mvs));
-  }   
-  useEffect(()=>getStudents(),[]);
-  const handleDelete=(deletionId)=>{
-    fetch(`https://62aa7f0d371180affbd633f8.mockapi.io/students/${deletionId}`,{
-    method:"DELETE",
-  }).then(()=>getStudents());
-  }
+  // const getStudentDetails=()=>{
+  // fetch("https://62aa7f0d371180affbd633f8.mockapi.io/students",{
+  //   method:"GET",
+  // }
+  // )
+  // .then((data)=>(data.json()))
+  // .then((mvs)=>setStudentList(mvs));
+  // }   
+  useEffect(()=>getStudentDetails(),[]);
+  // const handleDeleteStudent=(deletionId)=>{
+  //   fetch(`https://62aa7f0d371180affbd633f8.mockapi.io/students/${deletionId}`,{
+  //   method:"DELETE",
+  // }).then(()=>getStudentDetails());
+  // }
   
   return <div className="student-list">
     {studentList.map((disp) => (<Message 
@@ -37,7 +40,7 @@ export function StudentDetails() {
     deleteButton={<IconButton 
     aria-label="student-delete-button" 
     color="error" 
-    onClick={()=>handleDelete(disp.id)}>
+    onClick={()=>handleDeleteStudent(disp.id)}>
     <DeleteIcon />
   </IconButton>}
   editButton={<IconButton 

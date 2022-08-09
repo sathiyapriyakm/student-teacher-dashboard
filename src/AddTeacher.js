@@ -1,14 +1,14 @@
 import React from "react";
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
+import { useContext } from "react";
+import {AppContext} from './AppContext'
 import * as yup from "yup";
 
 
 export function AddTeacher() {
-  
-  const navigate=useNavigate();
+  const { addTeacher } = useContext(AppContext)
   
   const teacherValidationSchema=yup.object({
     name:yup.string().required("why not fill this name?"),
@@ -17,15 +17,15 @@ export function AddTeacher() {
     address:yup.string().required("why not fill this address?").min(10,"Need a bigger address"),
   })
   
-  const addStudent =(newTeacher) => {
-    fetch("https://62aa7f0d371180affbd633f8.mockapi.io/teachers", {
-    method: "POST",
-    body: JSON.stringify(newTeacher),
-    headers: {
-      "Content-Type" : "application/json",
-    },
-  }).then(() => navigate("/TeacherDetails"));
-  };
+  // const addTeacher =(newTeacher) => {
+  //   fetch("https://62aa7f0d371180affbd633f8.mockapi.io/teachers", {
+  //   method: "POST",
+  //   body: JSON.stringify(newTeacher),
+  //   headers: {
+  //     "Content-Type" : "application/json",
+  //   },
+  // }).then(() => navigate("/TeacherDetails"));
+  // };
   
   const {handleBlur,handleChange,handleSubmit,values,errors,touched}=useFormik({
     initialValues:{
@@ -37,7 +37,7 @@ export function AddTeacher() {
     validationSchema:teacherValidationSchema ,
     onSubmit:(newTeacher)=>{
       console.log("onSubmit",newTeacher);
-      addStudent(newTeacher);
+      addTeacher(newTeacher);
     },
   });
   

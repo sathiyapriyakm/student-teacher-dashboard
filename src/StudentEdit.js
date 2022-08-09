@@ -1,26 +1,29 @@
 import React from "react";
-import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useFormik } from "formik";
+import { useContext } from "react";
+import {AppContext} from './AppContext'
 import * as yup from "yup";
 
 
 export function StudentEdit() {
+  const { getStudent,student } = useContext(AppContext)
+
   const { studentId } = useParams();
-  const [student,setStudent]=useState(null);
-  const getStudent=()=>{
-    fetch(`https://62aa7f0d371180affbd633f8.mockapi.io/students/${studentId}`,{
-      method:"GET",
-    }
-    )
-    .then((data)=>(data.json()))
-    .then((mv)=>setStudent(mv));
-    }   
-  useEffect(()=>getStudent(),[]);
+  // const [student,setStudent]=useState(null);
+  // const getStudent=(studentId)=>{
+  //   fetch(`https://62aa7f0d371180affbd633f8.mockapi.io/students/${studentId}`,{
+  //     method:"GET",
+  //   }
+  //   )
+  //   .then((data)=>(data.json()))
+  //   .then((mv)=>setStudent(mv));
+  //   }   
+  useEffect(()=>getStudent(studentId),[]);
 
   return (student?<EditForm student={student}/>:"Loading...");
   }

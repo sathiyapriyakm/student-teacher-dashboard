@@ -1,26 +1,28 @@
 import React from "react";
-import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useFormik } from "formik";
+import { useContext } from "react";
+import {AppContext} from './AppContext'
 import * as yup from "yup";
 
 
 export function TeacherEdit() {
+  const { getTeacher,teacher } = useContext(AppContext)
   const { teacherId } = useParams();
-  const [teacher,setTeacher]=useState(null);
-  const getTeacher=()=>{
-    fetch(`https://62aa7f0d371180affbd633f8.mockapi.io/teachers/${teacherId}`,{
-      method:"GET",
-    }
-    )
-    .then((data)=>(data.json()))
-    .then((mv)=>setTeacher(mv));
-    }   
-  useEffect(()=>getTeacher(),[]);
+  // const [teacher,setTeacher]=useState(null);
+  // const getTeacher=(teacherId)=>{
+  //   fetch(`https://62aa7f0d371180affbd633f8.mockapi.io/teachers/${teacherId}`,{
+  //     method:"GET",
+  //   }
+  //   )
+  //   .then((data)=>(data.json()))
+  //   .then((mv)=>setTeacher(mv));
+  //   }   
+  useEffect(()=>getTeacher(teacherId),[]);
 
   return (teacher?<EditForm teacher={teacher}/>:"Loading...");
   }
